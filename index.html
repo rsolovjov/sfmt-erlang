@@ -1,42 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>sfmt-erlang by jj1bdx</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="sfmt-erlang : sfmt-erlang: SIMD-oriented Fast Mersenne Twister (SFMT) for Erlang" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>sfmt-erlang</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>sfmt-erlang</h1>
-        <p>sfmt-erlang: SIMD-oriented Fast Mersenne Twister (SFMT) for Erlang</p>
 
-        <p class="view"><a href="https://github.com/jj1bdx/sfmt-erlang">View the Project on GitHub <small>jj1bdx/sfmt-erlang</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jj1bdx/sfmt-erlang">View on GitHub</a>
 
+          <h1 id="project_title">sfmt-erlang</h1>
+          <h2 id="project_tagline">sfmt-erlang: SIMD-oriented Fast Mersenne Twister (SFMT) for Erlang</h2>
 
-        <ul>
-          <li><a href="https://github.com/jj1bdx/sfmt-erlang/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/jj1bdx/sfmt-erlang/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/jj1bdx/sfmt-erlang">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jj1bdx/sfmt-erlang/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jj1bdx/sfmt-erlang/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a name="sfmt-erlang-simd-oriented-fast-mersenne-twister-sfmt-for-erlang" class="anchor" href="#sfmt-erlang-simd-oriented-fast-mersenne-twister-sfmt-for-erlang"><span class="octicon octicon-link"></span></a>sfmt-erlang: SIMD-oriented Fast Mersenne Twister (SFMT) for Erlang</h1>
 
 <ul>
-<li>Version 0.9.0_BETA 10-APR-2014</li>
-<li>Edited and written by Kenji Rikitake (k2r.org, formerly Kyoto University)</li>
+<li>Version 0.10.0 19-MAY-2014</li>
+<li>Edited and written by Kenji Rikitake (Kenji Rikitake Professional Engineer's Office)</li>
 <li>Email contact: <a href="mailto:kenji.rikitake@acm.org">kenji.rikitake@acm.org</a>
 </li>
-</ul><p>Copyright (c) 2010-2014 Kenji Rikitake and Kyoto University. All rights
+</ul><h2>
+<a name="travis-ci-build-status-for-the-master-branch" class="anchor" href="#travis-ci-build-status-for-the-master-branch"><span class="octicon octicon-link"></span></a>Travis CI build status for the master branch</h2>
+
+<p><a href="https://travis-ci.org/jj1bdx/sfmt-erlang"><img src="https://travis-ci.org/jj1bdx/sfmt-erlang.svg?branch=master" alt="Build Status"></a></p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Copyright (c) 2010-2014 Kenji Rikitake and Kyoto University. All rights
 reserved.</p>
 
 <p>Copyright (c) 2006,2007 Mutsuo Saito, Makoto Matsumoto and Hiroshima
@@ -45,110 +56,57 @@ University. All rights reserved.</p>
 <p>See the file <code>LICENSE</code> for the license (new/simplified BSD license). (Note:
 license of rebar is Apache 2.0 License.)</p>
 
-<p>This software is based on SFMT ver. 1.3.3 (SIMD oriented Fast Mersenne
-Twister(SFMT)) by Mutsuo Saito (Hiroshima University) and Makoto
-Matsumoto (Hiroshima University)</p>
-
 <h2>
 <a name="details-of-sfmt-algorithm" class="anchor" href="#details-of-sfmt-algorithm"><span class="octicon octicon-link"></span></a>Details of SFMT algorithm</h2>
 
-<p>See <a href="http://www.math.sci.hiroshima-u.ac.jp/%7Em-mat/MT/SFMT/index.html">http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/SFMT/index.html</a></p>
+<p>This software is based on SFMT ver. 1.3.3 (SIMD oriented Fast Mersenne
+Twister(SFMT)) by Mutsuo Saito (Hiroshima University) and Makoto Matsumoto
+(Hiroshima University). See
+<a href="http://www.math.sci.hiroshima-u.ac.jp/%7Em-mat/MT/SFMT/index.html">http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/SFMT/index.html</a> for the further details.</p>
+
+<p>Note well: only (2^19937 - 1) period is supported.</p>
+
+<h2>
+<a name="available-modules" class="anchor" href="#available-modules"><span class="octicon octicon-link"></span></a>Available modules</h2>
 
 <ul>
-<li>Note: only (2^19937 - 1) period is supported</li>
-<li>Pure SFMT module now added as working code by request (from 0.8.0_RELEASE)</li>
+<li>module <code>sfmt</code>: SFMT with C NIFs</li>
+<li>module <code>sfmt_pure</code>: SFMT with pure Erlang</li>
+<li>See <a href="https://github.com/jj1bdx/sfmt-erlang/blob/master/CHANGES.md">CHANGES.md</a> for the detail of miscellaneous changes</li>
 </ul><h2>
-<a name="seeding-algorithm-changed-for-seedinteger-functions" class="anchor" href="#seeding-algorithm-changed-for-seedinteger-functions"><span class="octicon octicon-link"></span></a>Seeding algorithm changed for <code>seed(integer())</code> functions</h2>
+<a name="c-nifs" class="anchor" href="#c-nifs"><span class="octicon octicon-link"></span></a>C NIFs</h2>
 
 <ul>
-<li>The old <code>seed/1</code> function called <code>init_gen_rand/1</code> (up to 0.8.0_RELEASE)</li>
-<li>The internal state generated by <code>init_gen_rand/1</code> is predictable,
-especially when the value of the 1st element of the state list is
-very close to the given seed value. 
-(Michael Gebetsroither discovered this behavior)</li>
-<li>The new <code>seed/1</code> function calls <code>init_by_list32/1</code> (from 0.8.1_RELEASE)
-and the seed is given as <code>[integer()]</code>,
-to reduce predictability of the 1st element of the state list.</li>
-</ul><h2>
-<a name="supported-sfmt-prng-periods" class="anchor" href="#supported-sfmt-prng-periods"><span class="octicon octicon-link"></span></a>Supported SFMT PRNG periods</h2>
-
-<ul>
-<li>sfmt: (2^19937 - 1) (also on sfmt_pure)</li>
-</ul><h2>
-<a name="c-nifs-based-on-sfmt-133-added-from-030_release" class="anchor" href="#c-nifs-based-on-sfmt-133-added-from-030_release"><span class="octicon octicon-link"></span></a>C NIFs based on SFMT 1.3.3 added (from 0.3.0_RELEASE)</h2>
-
-<ul>
+<li>Compiler requirement: C99 support (modern Clang and gcc will do): <code>&lt;inttypes.h&gt;</code> required</li>
 <li>See <code>c_src/sfmt_nif.c</code> for the details</li>
 <li>Also refer to sfmt-extstate at <a href="http://github.com/jj1bdx/sfmt-extstate">http://github.com/jj1bdx/sfmt-extstate</a>
 </li>
 <li>The version number of this NIF is 101 (see <code>NIF_LOAD_INFO</code> macro value)</li>
 </ul><h2>
-<a name="removed-code" class="anchor" href="#removed-code"><span class="octicon octicon-link"></span></a>Removed code</h2>
-
-<ul>
-<li>Wichmann-Hill 2006 RNG code is removed</li>
-<li>netpbm test code is removed</li>
-</ul><h2>
-<a name="notable-bugfixes" class="anchor" href="#notable-bugfixes"><span class="octicon octicon-link"></span></a>Notable bugfixes</h2>
-
-<ul>
-<li>
-<code>gen_rand_all/1</code> is now properly applied in <code>sfmt_pure</code> module when <code>gen_rand32/1</code> was first invoked (from 0.8.2_RELEASE)</li>
-<li>Catched up with the latest rebar configuration file (from 0.7.0_RELEASE)</li>
-<li>Dynamically building ebin/sfmt.app (from 0.7.0_RELEASE)</li>
-<li>PDIC_SEED now named differently for each period (bugfix, from 0.5.2_RELEASE)</li>
-</ul><h2>
 <a name="tested-platforms" class="anchor" href="#tested-platforms"><span class="octicon octicon-link"></span></a>Tested platforms</h2>
 
 <ul>
 <li>FreeBSD/amd64 10-STABLE with Erlang/OTP 17.0</li>
-<li>OS X 10.9.1 Mavericks with Erlang/OTP 17.0</li>
+<li>OS X 10.9.3 Mavericks with Erlang/OTP 17.0</li>
+<li>CentOS 6.5 (amd64, on Virtualbox running on OS X 10.9.2) with Erlang/OTP 17.0</li>
 </ul><h2>
-<a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>Building</h2>
+<a name="make-options-of-erlangmk" class="anchor" href="#make-options-of-erlangmk"><span class="octicon octicon-link"></span></a>Make options (of erlang.mk)</h2>
 
 <ul>
 <li>
-<p>Use GNU/BSD make and then</p>
-
-<p>make compile</p>
-</li>
-</ul><p>The build script is Basho's rebar at <a href="https://github.com/basho/rebar">https://github.com/basho/rebar</a>,
-which will be automatically fetched under the directory <code>support/</code>.</p>
-
-<h2>
-<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
-
-<ul>
+<code>Makefile</code> works on both BSD/GNU make</li>
 <li>
-<p>For the HTML documentation files of the Erlang source </p>
-
-<p>make doc</p>
-
-<p>The documentation will be accessible at <code>doc/index.html</code>.</p>
+<code>Makefile.sfmt</code> is the real GNU make file; edit this file for modification</li>
+<li>Building: <code>make</code>
 </li>
-<li>
-<p>For the HTML documentation files of the C NIF source (Note: Doxygen required)</p>
-
-<p>make c_doc</p>
-
-<p>The documentation will be accessible at <code>c_doc/index.html</code>.</p>
+<li>C NIF Documentation: <code>make c_doc</code> (requires Doxygen)</li>
+<li>Erlang Documentation: <code>make docs</code>
 </li>
-</ul><h2>
-<a name="testing" class="anchor" href="#testing"><span class="octicon octicon-link"></span></a>Testing</h2>
-
-<ul>
-<li>
-<p>For unit testing with EUnit, do</p>
-
-<p>make eunit</p>
+<li>Testing: <code>make tests</code>
 </li>
-<li>
-<p>For testing the speed of 100 times of invoking 100000 <code>gen_rand32/1</code> function, do </p>
-
-<p>make speed</p>
-
-<p>(Previously this was 1000 times x 100000 invocations, but that was practically too slow.)</p>
+<li>Execution speed benchmark: <code>make speed</code>
 </li>
+<li>See also <a href="https://github.com/extend/erlang.mk">erlang.mk</a> for the details</li>
 </ul><h2>
 <a name="api-compatible-with-the-random-module" class="anchor" href="#api-compatible-with-the-random-module"><span class="octicon octicon-link"></span></a>API compatible with the random module</h2>
 
@@ -184,6 +142,7 @@ which will be automatically fetched under the directory <code>support/</code>.</
 <li>Kostis Sagonas</li>
 <li>Michael Gebetsroither</li>
 <li>Shunichi Shinohara</li>
+<li>Loïc Hoguin</li>
 </ul><h2>
 <a name="acknowledgments" class="anchor" href="#acknowledgments"><span class="octicon octicon-link"></span></a>ACKNOWLEDGMENTS</h2>
 
@@ -194,30 +153,18 @@ Computing and Media Studies (ACCMS), Kyoto University.</p>
 <p>Erlang Solutions kindly gave Kenji Rikitake
 an opportunity to give a presentation
 about this software at Erlang Factory SF Bay 2011.</p>
-
-<h2>
-<a name="notes-on-refactoring" class="anchor" href="#notes-on-refactoring"><span class="octicon octicon-link"></span></a>Notes on refactoring</h2>
-
-<ul>
-<li>Speedup by NIF: ~40 times faster than the pure Erlang code
-(when fully inline-optimized (see rebar.config))</li>
-<li>For the pure-Erlang code: writing <code>++</code> (append) operators by ring buffer loops
-(as a pair of lists consuming the head elements, and the corresponding accumulators)
-made the code ~50% faster; the pure Erlang code available under <code>reference_texts/</code>
-</li>
-<li>
-<code>gen_rand32/1</code>, <code>gen_rand32_max/2</code>, and <code>gen_rand_float/1</code> use Erlang lists 
-(Dan Gudmudsson showed the list version is faster)</li>
-<li>SSE2 code and options in sfmt-extstate were removed due to causing crash of Erlang BEAM
-(and even if the SSE2 code was enabled the performance increase would be minimal)</li>
-</ul>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/jj1bdx">jj1bdx</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">sfmt-erlang maintained by <a href="https://github.com/jj1bdx">jj1bdx</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>

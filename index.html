@@ -35,7 +35,7 @@
 <a id="sfmt-erlang-simd-oriented-fast-mersenne-twister-sfmt-for-erlang" class="anchor" href="#sfmt-erlang-simd-oriented-fast-mersenne-twister-sfmt-for-erlang" aria-hidden="true"><span class="octicon octicon-link"></span></a>sfmt-erlang: SIMD-oriented Fast Mersenne Twister (SFMT) for Erlang</h1>
 
 <ul>
-<li>Version 0.10.0 19-MAY-2014</li>
+<li>Version 0.10.1 7-NOV-2014</li>
 <li>Edited and written by Kenji Rikitake (Kenji Rikitake Professional Engineer's Office)</li>
 <li>Email contact: <a href="mailto:kenji.rikitake@acm.org">kenji.rikitake@acm.org</a>
 </li>
@@ -55,8 +55,7 @@ reserved.</p>
 <p>Copyright (c) 2006,2007 Mutsuo Saito, Makoto Matsumoto and Hiroshima
 University. All rights reserved.</p>
 
-<p>See the file <code>LICENSE</code> for the license (new/simplified BSD license). (Note:
-license of rebar is Apache 2.0 License.)</p>
+<p>See the file <code>LICENSE</code> for the license (new/simplified BSD license).</p>
 
 <h2>
 <a id="details-of-sfmt-algorithm" class="anchor" href="#details-of-sfmt-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Details of SFMT algorithm</h2>
@@ -92,8 +91,8 @@ Twister(SFMT)) by Mutsuo Saito (Hiroshima University) and Makoto Matsumoto
 <a id="tested-platforms" class="anchor" href="#tested-platforms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tested platforms</h2>
 
 <ul>
-<li>FreeBSD/amd64 10-STABLE with Erlang/OTP 17.0</li>
-<li>OS X 10.9.3 Mavericks with Erlang/OTP 17.0</li>
+<li>FreeBSD/amd64 10.1-BETA1 r271669 with Erlang/OTP 17.3</li>
+<li>OS X 10.9.5 Mavericks with Erlang/OTP 17.3</li>
 <li>CentOS 6.5 (amd64, on Virtualbox running on OS X 10.9.2) with Erlang/OTP 17.0</li>
 </ul>
 
@@ -107,7 +106,7 @@ Twister(SFMT)) by Mutsuo Saito (Hiroshima University) and Makoto Matsumoto
 <code>Makefile.sfmt</code> is the real GNU make file; edit this file for modification</li>
 <li>Building: <code>make</code>
 </li>
-<li>C NIF Documentation: <code>make c_doc</code> (requires Doxygen)</li>
+<li>C NIF Documentation: <code>make c_doc</code> (requires Doxygen 1.8.3.1 or later)</li>
 <li>Erlang Documentation: <code>make docs</code>
 </li>
 <li>Testing: <code>make tests</code>
@@ -141,6 +140,7 @@ Twister(SFMT)) by Mutsuo Saito (Hiroshima University) and Makoto Matsumoto
 <li>Makoto Matsumoto</li>
 <li>Dan Gudmundsson</li>
 <li>Michael Truog</li>
+<li>Michael Chmielewski</li>
 </ul>
 
 <h2>
@@ -150,7 +150,6 @@ Twister(SFMT)) by Mutsuo Saito (Hiroshima University) and Makoto Matsumoto
 <li>Dave "dizzyd" Smith</li>
 <li>Tuncer Ayaz</li>
 <li>Tim Bates (random_mt.erl implementator of Mersenne Twister)</li>
-<li>Dan Gudmundsson</li>
 <li>Richard O'Keefe</li>
 <li>Yurii Rashkovskii</li>
 <li>Kostis Sagonas</li>
